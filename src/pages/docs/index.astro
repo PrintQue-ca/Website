@@ -1,14 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="Docs – PrintQue" description="PrintQue documentation: getting started and setup.">
+  <PageHero title="Documentation" subtitle="Setup and usage guides for PrintQue." />
+
   <div class="mx-auto max-w-4xl px-4 py-12">
-    <h1 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Documentation</h1>
-    <p class="text-neutral-600 dark:text-neutral-400 mb-10">
-      Setup and usage guides for PrintQue.
-    </p>
     <ul class="space-y-2">
       <li>
         <a href={`${base}/docs/getting-started`} class="font-medium text-neutral-900 dark:text-white hover:underline">

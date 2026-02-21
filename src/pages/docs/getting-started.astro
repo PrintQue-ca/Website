@@ -1,16 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHero from '../../components/PageHero.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const repo = 'https://github.com/PrintQue-ca/PrintQue';
 ---
 
 <Layout title="Getting started – PrintQue" description="Quick start: clone PrintQue, set up the backend and frontend, and run the application.">
+  <PageHero title="Getting Started" subtitle="Run PrintQue locally with the API server and React frontend." />
+
   <div class="mx-auto max-w-4xl px-4 py-12">
-    <h1 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Getting started</h1>
-    <p class="text-neutral-600 dark:text-neutral-400 mb-10">
-      Run PrintQue locally with the API server and React frontend.
-    </p>
 
     <section class="mb-10">
       <h2 class="text-xl font-semibold text-neutral-900 dark:text-white mb-4">Prerequisites</h2>
