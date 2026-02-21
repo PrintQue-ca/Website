@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import logo from '../assets/images/logo.png';
 ---
 
 <Layout title="PrintQue – 3D Printer Fleet Management" description="Open-source software for 3D printer fleet management and automation. Centralized control, queue management, and real-time monitoring.">
@@ -34,11 +36,11 @@ import Layout from '../layouts/Layout.astro';
       </span>
       <div class="relative flex justify-center">
         <div class="absolute -inset-8 rounded-full bg-white/20 blur-3xl" aria-hidden="true" />
-        <img
-          src="/images/logo.png"
+        <Image
+          src={logo}
           alt="PrintQue"
-          width="200"
-          height="220"
+          width={200}
+          height={220}
           class="relative z-10 h-28 w-auto object-contain drop-shadow-[0_0_48px_rgba(255,255,255,0.5)] sm:h-36 md:h-44"
           fetchpriority="high"
           loading="eager"
