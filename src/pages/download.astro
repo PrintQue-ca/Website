@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const repo = 'https://github.com/PrintQue-ca/PrintQue';
 const releases = 'https://github.com/PrintQue-ca/PrintQue/releases';
@@ -47,9 +48,9 @@ const releasesLatest = 'https://github.com/PrintQue-ca/PrintQue/releases/latest'
     </section>
 
     <p class="text-neutral-500 dark:text-neutral-400 text-sm">
-      <a href="/docs/getting-started" class="hover:underline">Getting started</a>
+      <a href={`${base}/docs/getting-started`} class="hover:underline">Getting started</a>
       {' · '}
-      <a href="/" class="hover:underline">Home</a>
+      <a href={`${base}/`} class="hover:underline">Home</a>
     </p>
   </div>
 </Layout>

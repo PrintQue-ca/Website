@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const repo = 'https://github.com/PrintQue-ca/PrintQue';
 ---
@@ -50,9 +51,9 @@ npm run dev</code></pre>
     <p class="text-neutral-500 dark:text-neutral-400 text-sm">
       <a href={repo} target="_blank" rel="noopener noreferrer" class="hover:underline">Full README on GitHub</a>
       {' · '}
-      <a href="/download" class="hover:underline">Download</a>
+      <a href={`${base}/download`} class="hover:underline">Download</a>
       {' · '}
-      <a href="/" class="hover:underline">Home</a>
+      <a href={`${base}/`} class="hover:underline">Home</a>
     </p>
   </div>
 </Layout>

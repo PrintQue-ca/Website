@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import logo from '../assets/images/logo.png';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title="PrintQue – 3D Printer Fleet Management" description="Open-source software for 3D printer fleet management and automation. Centralized control, queue management, and real-time monitoring.">
@@ -111,7 +112,7 @@ import logo from '../assets/images/logo.png';
     <p class="text-center text-neutral-500 dark:text-neutral-400 text-sm">
       <a href="https://discord.gg/da4kuc3Axk" target="_blank" rel="noopener noreferrer" class="hover:underline">Join our Discord</a>
       {' · '}
-      <a href="/features">See all features</a>
+      <a href={`${base}/features`}>See all features</a>
     </p>
   </div>
 </Layout>
