@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 const repo = 'https://github.com/PrintQue-ca/PrintQue';
 const releases = 'https://github.com/PrintQue-ca/PrintQue/releases';
+const releasesLatest = 'https://github.com/PrintQue-ca/PrintQue/releases/latest';
 ---
 
 <Layout title="Download – PrintQue" description="Download PrintQue: get the latest release or build from source. Windows, macOS, and Linux.">
@@ -13,18 +14,21 @@ const releases = 'https://github.com/PrintQue-ca/PrintQue/releases';
     </p>
 
     <section class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-6 mb-8">
-      <h2 class="text-xl font-semibold text-neutral-900 dark:text-white mb-2">Releases</h2>
+      <h2 class="text-xl font-semibold text-neutral-900 dark:text-white mb-2">Latest release</h2>
       <p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4">
-        Pre-built executables for Windows, macOS, and Linux are available on GitHub Releases.
+        Pre-built executables for Windows, macOS, and Linux. Download the right build for your platform on GitHub.
       </p>
       <a
-        href={releases}
+        href={releasesLatest}
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-5 py-2.5 font-medium hover:opacity-90"
       >
-        View releases
+        Download latest (Windows · macOS · Linux)
       </a>
+      <p class="text-neutral-500 dark:text-neutral-500 text-sm mt-3">
+        <a href={releases} target="_blank" rel="noopener noreferrer" class="hover:underline">View all releases</a>
+      </p>
     </section>
 
     <section class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-6 mb-8">

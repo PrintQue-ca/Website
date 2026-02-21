@@ -29,18 +29,19 @@ import Layout from '../layouts/Layout.astro';
     <div class="absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/20 blur-[80px] dark:bg-white/10" aria-hidden="true" />
     <!-- Content -->
     <div class="relative z-10 flex max-w-3xl flex-col items-center gap-8">
-      <span class="rounded-full border border-warm-300/50 bg-warm-400/20 px-4 py-1.5 text-sm font-semibold text-warm-100 backdrop-blur-sm shadow-sm">
-        Open source
+      <span class="rounded-full border border-white/40 bg-white/20 px-4 py-1.5 text-sm font-semibold text-white shadow-md backdrop-blur-sm">
+        Open Source
       </span>
-      <div class="relative">
-        <div class="absolute inset-0 scale-150 rounded-full bg-white/25 blur-3xl" aria-hidden="true" />
+      <div class="relative flex justify-center">
+        <div class="absolute -inset-8 rounded-full bg-white/20 blur-3xl" aria-hidden="true" />
         <img
           src="/images/logo.png"
           alt="PrintQue"
           width="200"
           height="220"
-          class="relative h-28 w-auto object-contain drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] sm:h-36 md:h-44"
+          class="relative z-10 h-28 w-auto object-contain drop-shadow-[0_0_48px_rgba(255,255,255,0.5)] sm:h-36 md:h-44"
           fetchpriority="high"
+          loading="eager"
         />
       </div>
       <div class="space-y-5">
@@ -61,8 +62,10 @@ import Layout from '../layouts/Layout.astro';
           View on GitHub
         </a>
         <a
-          href="/download"
-          class="inline-flex items-center gap-2 rounded-xl border-2 border-accent-300 bg-accent-400/20 px-6 py-3.5 font-semibold text-white backdrop-blur-sm transition hover:border-accent-200 hover:bg-accent-400/35 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-printque-700"
+          href="https://github.com/PrintQue-ca/PrintQue/releases/latest"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-xl border-2 border-accent-300 bg-accent-500 px-6 py-3.5 font-semibold text-white shadow-lg transition hover:bg-accent-400 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-printque-700"
         >
           Download
         </a>
