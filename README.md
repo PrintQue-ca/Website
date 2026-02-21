@@ -25,6 +25,10 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## 📦 Deployment
+
+This site is deployed on **GitHub Pages**. Pushes to the `main` branch trigger an automatic build and deploy via the [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) workflow (Astro + `actions/deploy-pages`).
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
