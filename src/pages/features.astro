@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const features = [
+  { title: 'Centralized Control', body: 'Manage all your 3D printers from a single web interface.' },
+  { title: 'Queue Management', body: 'Create, prioritize, and distribute print jobs automatically.' },
+  { title: 'Real-time Monitoring', body: 'Track printer status, progress, and temperatures via WebSocket.' },
+  { title: 'Group Organization', body: 'Organize printers into groups for specialized workloads.' },
+  { title: 'Automatic Ejection', body: 'Configure custom end G-code for automated part removal.' },
+  { title: 'Statistics Tracking', body: 'Monitor filament usage and printer performance.' },
+  { title: 'Dark/Light Theme', body: 'Toggle between themes for comfortable viewing.' },
+  { title: 'License Tiers', body: 'Free, Standard, Professional, and Enterprise options.' },
+];
+
+const printerSupport = [
+  { name: 'OctoPrint', desc: 'API integration for OctoPrint-compatible printers.' },
+  { name: 'Bambu Lab', desc: 'Native support via MQTT and FTP protocols.' },
+];
+---
+
+<Layout title="Features – PrintQue" description="PrintQue features: centralized control, queue management, real-time monitoring, OctoPrint and Bambu Lab support.">
+  <div class="mx-auto max-w-4xl px-4 py-12">
+    <h1 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Features</h1>
+    <p class="text-neutral-600 dark:text-neutral-400 mb-12">
+      Everything you need to run a 3D print farm from one place.
+    </p>
+
+    <section class="mb-14">
+      <h2 class="text-xl font-semibold text-neutral-900 dark:text-white mb-6">Capabilities</h2>
+      <ul class="grid sm:grid-cols-2 gap-4">
+        {features.map((f) => (
+          <li class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-5">
+            <h3 class="font-semibold text-neutral-900 dark:text-white mb-1">{f.title}</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">{f.body}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mb-14">
+      <h2 class="text-xl font-semibold text-neutral-900 dark:text-white mb-6">Printer support</h2>
+      <ul class="space-y-4">
+        {printerSupport.map((p) => (
+          <li class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-5">
+            <h3 class="font-semibold text-neutral-900 dark:text-white mb-1">{p.name}</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400">{p.desc}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <p class="text-neutral-500 dark:text-neutral-400 text-sm">
+      <a href="/" class="hover:underline">Back to home</a>
+      {' · '}
+      <a href="https://github.com/PrintQue-ca/PrintQue#features" target="_blank" rel="noopener noreferrer" class="hover:underline">Full README</a>
+    </p>
+  </div>
+</Layout>

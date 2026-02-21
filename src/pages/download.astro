@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const repo = 'https://github.com/PrintQue-ca/PrintQue';
+const releases = 'https://github.com/PrintQue-ca/PrintQue/releases';
+---
+
+<Layout title="Download – PrintQue" description="Download PrintQue: get the latest release or build from source. Windows, macOS, and Linux.">
+  <div class="mx-auto max-w-4xl px-4 py-12">
+    <h1 class="text-3xl font-bold text-neutral-900 dark:text-white mb-2">Download</h1>
+    <p class="text-neutral-600 dark:text-neutral-400 mb-10">
+      Get the latest release or build from source.
+    </p>
+
+    <section class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-6 mb-8">
+      <h2 class="text-xl font-semibold text-neutral-900 dark:text-white mb-2">Releases</h2>
+      <p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4">
+        Pre-built executables for Windows, macOS, and Linux are available on GitHub Releases.
+      </p>
+      <a
+        href={releases}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-lg bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 px-5 py-2.5 font-medium hover:opacity-90"
+      >
+        View releases
+      </a>
+    </section>
+
+    <section class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-6 mb-8">
+      <h2 class="text-xl font-semibold text-neutral-900 dark:text-white mb-2">Build from source</h2>
+      <p class="text-neutral-600 dark:text-neutral-400 text-sm mb-4">
+        Prerequisites: Node.js 18+, Python 3.10+, pip. Clone the repo and follow the README for backend and frontend setup.
+      </p>
+      <a
+        href={repo}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 rounded-lg border border-neutral-300 dark:border-neutral-600 px-5 py-2.5 font-medium hover:bg-neutral-100 dark:hover:bg-neutral-800"
+      >
+        GitHub repository
+      </a>
+    </section>
+
+    <p class="text-neutral-500 dark:text-neutral-400 text-sm">
+      <a href="/docs/getting-started" class="hover:underline">Getting started</a>
+      {' · '}
+      <a href="/" class="hover:underline">Home</a>
+    </p>
+  </div>
+</Layout>

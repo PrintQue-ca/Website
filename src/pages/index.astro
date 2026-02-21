@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="PrintQue – 3D Printer Fleet Management" description="Open-source software for 3D printer fleet management and automation. Centralized control, queue management, and real-time monitoring.">
+  <!-- Hero: full-width, rich gradient, accent colors, logo, headline, CTAs -->
+  <section class="hero-section relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 py-24 text-center">
+    <!-- Base gradient (blue + cyan accent) -->
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-printque-500 via-printque-600 to-printque-800 dark:from-printque-800 dark:via-printque-900 dark:to-printque-950"
+      aria-hidden="true"
+    />
+    <!-- Accent gradient overlay (cyan tint) -->
+    <div
+      class="absolute inset-0 bg-gradient-to-tl from-accent-500/20 via-transparent to-printque-400/10 dark:from-accent-400/15 dark:to-printque-500/10"
+      aria-hidden="true"
+    />
+    <!-- Animated gradient mesh (subtle movement) -->
+    <div class="hero-glow absolute inset-0 opacity-70 dark:opacity-50" aria-hidden="true" />
+    <!-- Grid overlay - more visible -->
+    <div
+      class="absolute inset-0 opacity-[0.12] dark:opacity-[0.1]"
+      style="background-image: linear-gradient(rgba(255,255,255,.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.4) 1px, transparent 1px); background-size: 56px 56px;"
+      aria-hidden="true"
+    />
+    <!-- Glow orbs -->
+    <div class="absolute left-1/4 top-1/4 h-72 w-72 rounded-full bg-accent-400/30 blur-[100px] dark:bg-accent-500/20" aria-hidden="true" />
+    <div class="absolute bottom-1/4 right-1/4 h-96 w-96 rounded-full bg-printque-400/25 blur-[120px] dark:bg-printque-500/20" aria-hidden="true" />
+    <div class="absolute left-1/2 top-1/3 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/20 blur-[80px] dark:bg-white/10" aria-hidden="true" />
+    <!-- Content -->
+    <div class="relative z-10 flex max-w-3xl flex-col items-center gap-8">
+      <span class="rounded-full border border-warm-300/50 bg-warm-400/20 px-4 py-1.5 text-sm font-semibold text-warm-100 backdrop-blur-sm shadow-sm">
+        Open source
+      </span>
+      <div class="relative">
+        <div class="absolute inset-0 scale-150 rounded-full bg-white/25 blur-3xl" aria-hidden="true" />
+        <img
+          src="/images/logo.png"
+          alt="PrintQue"
+          width="200"
+          height="220"
+          class="relative h-28 w-auto object-contain drop-shadow-[0_0_40px_rgba(255,255,255,0.4)] sm:h-36 md:h-44"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="space-y-5">
+        <h1 class="font-extrabold tracking-tight text-white text-5xl drop-shadow-lg sm:text-6xl md:text-7xl font-sans">
+          PrintQue
+        </h1>
+        <p class="mx-auto max-w-2xl text-lg text-white/95 sm:text-xl leading-relaxed">
+          3D printer fleet management and automation. Centralized control, queue management, and real-time monitoring for print farms.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a
+          href="https://github.com/PrintQue-ca/PrintQue"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 font-semibold text-printque-600 shadow-xl transition hover:scale-[1.02] hover:bg-white/95 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-printque-600"
+        >
+          View on GitHub
+        </a>
+        <a
+          href="/download"
+          class="inline-flex items-center gap-2 rounded-xl border-2 border-accent-300 bg-accent-400/20 px-6 py-3.5 font-semibold text-white backdrop-blur-sm transition hover:border-accent-200 hover:bg-accent-400/35 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-printque-700"
+        >
+          Download
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .hero-glow {
+      background: radial-gradient(ellipse 80% 50% at 50% 40%, rgba(34, 211, 238, 0.25), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(59, 130, 246, 0.2), transparent 45%);
+      animation: hero-glow-shift 12s ease-in-out infinite;
+    }
+    @keyframes hero-glow-shift {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 0.85; }
+    }
+  </style>
+
+  <!-- Page content -->
+  <div class="mx-auto max-w-4xl px-4 py-16">
+    <section class="grid sm:grid-cols-2 gap-6 mb-16">
+      <div class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-6">
+        <h2 class="font-semibold text-lg mb-2">Centralized control</h2>
+        <p class="text-neutral-600 dark:text-neutral-400 text-sm">Manage all your 3D printers from a single web interface.</p>
+      </div>
+      <div class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-6">
+        <h2 class="font-semibold text-lg mb-2">Queue management</h2>
+        <p class="text-neutral-600 dark:text-neutral-400 text-sm">Create, prioritize, and distribute print jobs automatically.</p>
+      </div>
+      <div class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-6">
+        <h2 class="font-semibold text-lg mb-2">Real-time monitoring</h2>
+        <p class="text-neutral-600 dark:text-neutral-400 text-sm">Track printer status, progress, and temperatures via WebSocket.</p>
+      </div>
+      <div class="rounded-xl border border-neutral-200 dark:border-neutral-700 p-6">
+        <h2 class="font-semibold text-lg mb-2">OctoPrint &amp; Bambu Lab</h2>
+        <p class="text-neutral-600 dark:text-neutral-400 text-sm">Supports OctoPrint-compatible printers and Bambu Lab via MQTT/FTP.</p>
+      </div>
+    </section>
+
+    <p class="text-center text-neutral-500 dark:text-neutral-400 text-sm">
+      <a href="https://discord.gg/da4kuc3Axk" target="_blank" rel="noopener noreferrer" class="hover:underline">Join our Discord</a>
+      {' · '}
+      <a href="/features">See all features</a>
+    </p>
+  </div>
+</Layout>
